@@ -1,0 +1,72 @@
+@import "./nopadnomar";
+@import "./variables";
+@import "./utility";
+
+body {
+  background-color: $secondaryClr;
+}
+
+.top-header {
+  @extend %center-body;
+  @extend %center-elem;
+  justify-content: space-between;
+  background-color: $primaryClr;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  .logo-title {
+    font-size: 30px;
+  }
+  .header-menu-list {
+    @extend %center-elem;
+    gap: 4rem;
+    list-style-type: none;
+
+    .header-menu-list-item {
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  button {
+    @include create-button-type("secondary");
+    transition: all 0.2s ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.jokesection {
+  width: 40%;
+  padding: 2rem;
+
+  @extend %center-elem;
+  flex-direction: column;
+  background-color: $primaryClr;
+  align-self: center;
+  margin: auto;
+  margin-top: 5rem;
+  #readingImg {
+    width: 10rem;
+  }
+  #joke {
+    font-size: large;
+    padding: 1rem;
+  }
+  button {
+    @include create-button-type("secondary");
+    transition: all 0.2s ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  box-shadow: 3px 3px 10px 2px;
+}
